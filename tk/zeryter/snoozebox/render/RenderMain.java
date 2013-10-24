@@ -32,9 +32,11 @@ public class RenderMain implements Runnable {
 
         SnoozeBoxMain.Variables.displayCreated = true;
 
+        GL11.glEnable(GL11.GL_DEPTH_TEST);
+
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        gluPerspective(30f,(float) SnoozeBoxMain.Variables.displayX/SnoozeBoxMain.Variables.displayY,0.001f,100);
+        gluPerspective(45f,(float) SnoozeBoxMain.Variables.displayX/SnoozeBoxMain.Variables.displayY,0.001f,100);
         glMatrixMode(GL_MODELVIEW);
 
         RenderInit();
