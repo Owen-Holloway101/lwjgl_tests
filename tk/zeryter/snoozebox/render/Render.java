@@ -20,6 +20,11 @@ public class Render extends RenderMain {
             positionY -= 0.1f;
         }
 
+        if (Keyboard.isKeyDown(Keyboard.KEY_RCONTROL)) {
+            //rotateZ -= 1f;
+            positionY += 0.1f;
+        }
+
         if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
             //rotateY -= 1f;
             positionX += 0.1f;
