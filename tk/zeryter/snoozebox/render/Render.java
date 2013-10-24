@@ -33,12 +33,12 @@ public class Render extends RenderMain {
         }
 
         if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
-            rotateX += 1f;
+            rotateX -= 1f;
 
         }
 
         if (Keyboard.isKeyDown(Keyboard.KEY_S)) {
-            rotateX -= 1f;
+            rotateX += 1f;
 
         }
 
@@ -52,39 +52,19 @@ public class Render extends RenderMain {
         GL11.glRotatef(rotateX,1.0f,0.0f,0.0f);
         GL11.glRotatef(rotateY,0.0f,1.0f,0.0f);
         GL11.glRotatef(rotateZ,0.0f,0.0f,1.0f);
-        GL11.glColor3f(0.5f,0.5f,1.0f);
+
+        GL11.glColor3f( 0.0f, 1.0f, 0.0f);
 
         GL11.glBegin(GL11.GL_QUADS);
 
-        GL11.glColor3f(0.05f,0.95f,0.05f);
-
         //Top Face
-        GL11.glVertex3f(-1.0f, 1f, 1.0f);
-        GL11.glVertex3f( 1.0f, 1f, 1.0f);
-        GL11.glVertex3f( 1.0f, 1f,-1.0f);
-        GL11.glVertex3f(-1.0f, 1f,-1.0f);
-
-        //Bottom Face
-        GL11.glVertex3f( 1.0f,-1f,-1.0f);
-        GL11.glVertex3f(-1.0f,-1f,-1.0f);
-        GL11.glVertex3f(-1.0f,-1f, 1.0f);
-        GL11.glVertex3f( 1.0f,-1f, 1.0f);
-
-        GL11.glColor3f(0.95f,0.05f,0.05f);
-
-        //Left Face
-        GL11.glVertex3f(-1.0f, 1f,-1.0f);
-        GL11.glVertex3f(-1.0f,-1f,-1.0f);
-        GL11.glVertex3f(-1.0f,-1f, 1.0f);
-        GL11.glVertex3f(-1.0f, 1f, 1.0f);
-
-        //Right Face
-        GL11.glVertex3f( 1.0f, 1f,-1.0f);
-        GL11.glVertex3f( 1.0f,-1f,-1.0f);
-        GL11.glVertex3f( 1.0f,-1f, 1.0f);
-        GL11.glVertex3f( 1.0f, 1f, 1.0f);
+        GL11.glVertex3f(-1.0f, 0.0f, 1.0f);
+        GL11.glVertex3f( 1.0f, 0.0f, 1.0f);
+        GL11.glVertex3f( 1.0f, 0.0f,-1.0f);
+        GL11.glVertex3f(-1.0f, 0.0f,-1.0f);
 
         GL11.glEnd();
+
 
     }
 
