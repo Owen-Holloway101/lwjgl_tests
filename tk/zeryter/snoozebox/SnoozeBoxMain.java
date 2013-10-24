@@ -2,7 +2,6 @@ package tk.zeryter.snoozebox;
 
 //Owen Holloway [zeryter] ZerytSoft 2013
 
-import tk.zeryter.snoozebox.control.MouseMain;
 import tk.zeryter.snoozebox.render.*;
 
 public class SnoozeBoxMain {
@@ -10,7 +9,6 @@ public class SnoozeBoxMain {
     public static void main(String[] args) {
 
        new Thread(Variables.renderMain).start();
-       //new Thread(Variables.mouseMain).start();
 
     }
 
@@ -24,7 +22,6 @@ public class SnoozeBoxMain {
 
         //Thread Main Classes (static so that they can be access globally)
         public static Render renderMain = new Render();
-        public static MouseMain mouseMain = new MouseMain();
 
     }
 
